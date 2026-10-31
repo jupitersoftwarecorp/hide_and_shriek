@@ -36,6 +36,8 @@ class TitleRenderer:
         screen_h = view_height * tile_size
         castle_image = pygame.image.load(resource_path('assets', 'dark_castle.png')).convert_alpha()
         self.background = pygame.transform.scale(castle_image, (screen_w, screen_h))
+        logo_image = pygame.image.load(resource_path('assets', 'jsc.png')).convert_alpha()
+        self.logo = logo_image
         self.background_shade = pygame.Surface((screen_w, screen_h), pygame.SRCALPHA)
         self.background_shade.fill((0, 0, 0, 85))
         self.mist_renderer = MistRenderer(screen_w, screen_h)
@@ -104,6 +106,8 @@ class TitleRenderer:
         self.screen.blit(self.background, (0, 0))
         self.screen.blit(self.background_shade, (0, 0))
         self.mist_renderer.render(self.screen, now)
+        logo_rect = self.logo.get_rect(bottomright=(screen_w, screen_h))
+        self.screen.blit(self.logo, logo_rect)
         self._render_title(cx, cy)
 
         self.github_link_rect = None
