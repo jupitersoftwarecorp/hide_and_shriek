@@ -10,12 +10,12 @@ class Combat(esper.Processor):
         self.hit_sounds = []
         for filename in ("explosion.wav", "explosion2.wav", "explosion3.wav"):
             try:
-                self.hit_sounds.append(pygame.mixer.Sound(resource_path("sounds", filename)))
+                self.hit_sounds.append(pygame.mixer.Sound(str(resource_path("sounds", filename))))
             except (pygame.error, FileNotFoundError):
                 pass
             
         try:
-            self.die_sound = pygame.mixer.Sound(resource_path("sounds", "die.wav"))
+            self.die_sound = pygame.mixer.Sound(str(resource_path("sounds", "die.wav")))
         except (pygame.error, FileNotFoundError):
             self.die_sound = None
 
