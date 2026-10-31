@@ -41,7 +41,7 @@ class TitleRenderer:
         self.background_shade = pygame.Surface((screen_w, screen_h), pygame.SRCALPHA)
         self.background_shade.fill((0, 0, 0, 85))
         self.mist_renderer = MistRenderer(screen_w, screen_h)
-        self.menu_click_sound = pygame.mixer.Sound(str(resource_path('sounds', 'Menu_click_1.wav')))
+        self.menu_click_sound = pygame.mixer.Sound(resource_path('sounds', 'Menu_click_1.wav'))
 
         self.page = 'main'
         self.menu_item_rects: dict[str, pygame.Rect] = {}

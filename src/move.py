@@ -7,10 +7,10 @@ from tcod.map import compute_fov
 from .components import *
 from .resources import resource_path
 
-door_sound = pygame.mixer.Sound(str(resource_path("sounds", "door.wav")))
+door_sound = pygame.mixer.Sound(resource_path("sounds", "door.wav"))
 door_sound.set_volume(0.3)
 move_sounds = [
-    pygame.mixer.Sound(str(resource_path("sounds", filename)))
+    pygame.mixer.Sound(resource_path("sounds", filename))
     for filename in ("move1.wav", "move2.wav", "move3.wav")
 ]
 for sound in move_sounds:

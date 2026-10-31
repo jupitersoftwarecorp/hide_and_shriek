@@ -8,12 +8,12 @@ from .level_setup import init_level_world
 from .entities import create_player
 from .resources import resource_path
 
-up_stairs_sound = pygame.mixer.Sound(str(resource_path("sounds", "up.wav")))
+up_stairs_sound = pygame.mixer.Sound(resource_path("sounds", "up.wav"))
 up_stairs_sound.set_volume(0.5)
-down_stairs_sound = pygame.mixer.Sound(str(resource_path("sounds", "down.wav")))
+down_stairs_sound = pygame.mixer.Sound(resource_path("sounds", "down.wav"))
 down_stairs_sound.set_volume(0.5)
 scream_sounds = [
-    pygame.mixer.Sound(str(resource_path("sounds", filename)))
+    pygame.mixer.Sound(resource_path("sounds", filename))
     for filename in ("scream1.wav", "scream2.wav", "scream3.wav")
 ]
 for sound in scream_sounds:

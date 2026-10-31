@@ -20,7 +20,7 @@ def main() -> None:
     pygame.key.set_repeat(250, 130)
 
     # Play title music initially
-    pygame.mixer.music.load(str(resource_path("music", "title.mp3")))
+    pygame.mixer.music.load(resource_path("music", "title.mp3"))
     pygame.mixer.music.set_volume(0.4)
     pygame.mixer.music.play(-1)
 
@@ -36,7 +36,7 @@ def main() -> None:
     def start_game() -> None:
         nonlocal state, game_initialized
         state = "PLAYING"
-        pygame.mixer.music.load(str(resource_path("music", "gameplay.mp3")))
+        pygame.mixer.music.load(resource_path("music", "gameplay.mp3"))
         pygame.mixer.music.set_volume(0.4)
         pygame.mixer.music.play(-1)
 
