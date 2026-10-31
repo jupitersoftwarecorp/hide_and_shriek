@@ -23,6 +23,7 @@ packages = ["src"]
 
 [tool.hatch.build.targets.wheel.force-include]
 assets = "src/assets"
+fonts = "src/fonts"
 levels = "src/levels"
 music = "src/music"
 sounds = "src/sounds"
